@@ -10,7 +10,7 @@
 	}
 	$db = "Courses";
 	
-	$query = "UPDATE $db.User SET FOREIGN KEY (school) REFERENCES School (id) ON DELETE CASCADE";
+	$query = "ALTER TABLE $db.User ADD FOREIGN KEY (school) REFERENCES $db.School (id) ON DELETE CASCADE";
 	
 	$create_db = mysqli_query($link, $query);
 	if ($create_db) 
@@ -22,7 +22,7 @@
 		echo "Failed to create a database";
 	}
 	
-	$query = "UPDATE $db.Courses SET FOREIGN KEY (teacher) REFERENCES User (id) ON DELETE CASCADE";
+	$query = "ALTER TABLE $db.Courses ADD FOREIGN KEY (teacher) REFERENCES $db.User (id) ON DELETE CASCADE";
 	
 	$create_db = mysqli_query($link, $query);
 	if ($create_db) 
@@ -34,7 +34,7 @@
 		echo "Failed to create a database";
 	}
 	
-	$query = "UPDATE $db.CourseStudents SET FOREIGN KEY (course) REFERENCES Course (id) ON DELETE CASCADE";
+	$query = "ALTER TABLE $db.CourseStudents ADD FOREIGN KEY (course) REFERENCES $db.Courses (id) ON DELETE CASCADE";
 	
 	$create_db = mysqli_query($link, $query);
 	if ($create_db) 
@@ -46,7 +46,7 @@
 		echo "Failed to create a database";
 	}
 	
-	$query = "UPDATE $db.CourseStudents SET FOREIGN KEY (student) REFERENCES User (id) ON DELETE CASCADE";
+	$query = "ALTER TABLE $db.CourseStudents ADD FOREIGN KEY (student) REFERENCES $db.User (id) ON DELETE CASCADE";
 	
 	$create_db = mysqli_query($link, $query);
 	if ($create_db) 
@@ -58,7 +58,7 @@
 		echo "Failed to create a database";
 	}
 	
-	$query = "UPDATE $db.CourseContents SET FOREIGN KEY (course) REFERENCES Course (id) ON DELETE CASCADE";
+	$query = "ALTER TABLE $db.CourseContents ADD FOREIGN KEY (course) REFERENCES $db.Courses (id) ON DELETE CASCADE";
 	
 	$create_db = mysqli_query($link, $query);
 	if ($create_db) 
@@ -70,7 +70,7 @@
 		echo "Failed to create a database";
 	}
 	
-	$query = "UPDATE $db.CourseContents SET FOREIGN KEY (task) REFERENCES Task (id) ON DELETE CASCADE";
+	$query = "ALTER TABLE $db.CourseContents ADD FOREIGN KEY (task) REFERENCES $db.Task (id) ON DELETE CASCADE";
 	
 	$create_db = mysqli_query($link, $query);
 	if ($create_db) 
