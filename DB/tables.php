@@ -2,7 +2,7 @@
 	$link = mysqli_connect ("localhost", "root", "");
 	if ($link) 
 	{
-		echo "Connected to the server", "<br>";
+		echo "Connected to the server", "</br>";
 	} 
 	else 
 	{
@@ -25,7 +25,7 @@
 	$create_db = mysqli_query($link, $query);
 	if ($create_db) 
 	{
-		echo "User table was created successfully";
+		echo "User table was created successfully</br>";
 	}
 	else 
 	{
@@ -43,10 +43,82 @@
 	$create_db = mysqli_query($link, $query);
 	if ($create_db) 
 	{
-		echo "School table was created successfully";
+		echo "School table was created successfully</br>";
 	}
 	else 
 	{
 		echo "Failed to create a database";
 	}
+	
+	
+	$query = "CREATE TABLE IF NOT EXISTS $db.Courses 
+	( id INT NOT NULL AUTO_INCREMENT , 
+	name TEXT NOT NULL, 
+	teacher INT NOT NULL, 
+	PRIMARY KEY (id)) 
+	ENGINE = InnoDB;";
+	
+	$create_db = mysqli_query($link, $query);
+	if ($create_db) 
+	{
+		echo "Courses table was created successfully</br>";
+	}
+	else 
+	{
+		echo "Failed to create a database";
+	}
+	
+	
+	$query = "CREATE TABLE IF NOT EXISTS $db.CourseStudents 
+	( id INT NOT NULL AUTO_INCREMENT , 
+	course INT NOT NULL, 
+	student INT NOT NULL, 
+	PRIMARY KEY (id)) 
+	ENGINE = InnoDB;";
+	
+	$create_db = mysqli_query($link, $query);
+	if ($create_db) 
+	{
+		echo "CourseStudents table was created successfully</br>";
+	}
+	else 
+	{
+		echo "Failed to create a database";
+	}
+	
+	$query = "CREATE TABLE IF NOT EXISTS $db.CourseContents 
+	( id INT NOT NULL AUTO_INCREMENT , 
+	course INT NOT NULL, 
+	task INT NOT NULL, 
+	PRIMARY KEY (id)) 
+	ENGINE = InnoDB;";
+	
+	$create_db = mysqli_query($link, $query);
+	if ($create_db) 
+	{
+		echo "CourseContents was created successfully</br>";
+	}
+	else 
+	{
+		echo "Failed to create a database";
+	}
+	
+	$query = "CREATE TABLE IF NOT EXISTS $db.Task 
+	( id INT NOT NULL AUTO_INCREMENT , 
+	type ENUM('lecture','practice','test','consultation'), 
+	description TEXT NOT NULL, 
+	path TEXT NOT NULL, 
+	PRIMARY KEY (id)) 
+	ENGINE = InnoDB;";
+	
+	$create_db = mysqli_query($link, $query);
+	if ($create_db) 
+	{
+		echo "Task table was created successfully</br>";
+	}
+	else 
+	{
+		echo "Failed to create a database";
+	}
+	
 ?>
