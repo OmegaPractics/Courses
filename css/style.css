@@ -150,6 +150,16 @@ hr {
 	margin-top: 70px;
 }
 
+.wb, .w p {
+	font-size: 17px; 
+}
+
+.wb pre {
+	background-color: #f2f2f2; 
+	font-size: 17px; 
+	border: none;
+}
+
 #lg {
 	background: #ebebeb;
 	padding-top: 70px;
@@ -162,12 +172,35 @@ hr {
 	margin-bottom: 70px;
 }
 
+.hidden {
+	display: none;
+}
 
+form {
+	padding: 50px 50px 50px 50px;
+	background-color: #fff;
+	max-width: 350px;
+	margin: auto;
+	position: relative;
+}
 
+form input {
+	width: 100%;
+	margin-bottom: 10px;
+	font-family: "Raleway";
+	font-weight: 300;
+	font-size: 20px;
+	color: #333;
+}
 
-
-
-
+#send {
+	font-family: "Raleway";
+	font-weight: 300;
+	font-size: 24px;
+	background-color: #e66761;
+	color: white;
+	margin-left: -2px;
+}
 
 
 
