@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="css/bootstrap.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
 </head>
 <body>
   <div class="navbar navbar-inverse navbar-fixed-top">
@@ -17,14 +18,14 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">C<i class="fa fa-circle"></i>URSES</a>
+        <a class="navbar-brand" href="index.php">C<i class="fa fa-circle"></i>URSES</a>
       </div>
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li><a href="#">О нас</a></li>
-          <li><a href="#">Курсы онлайн</a></li>
-          <li><a href="#">Контакты</a></li>
-          <li class="active"><a href="#">Войти</a></li>
+          <li><a href="about_company.php">О нас</a></li>
+          <li><a href="admin.php">Курсы онлайн</a></li>
+          <li><a href="contacts.php">Контакты</a></li>
+          <li><a href="#form" class="popup">Войти</a></li>		  
         </ul>
       </div>
     </div>
@@ -118,9 +119,20 @@
         </div>
       </div>
     </div>
-  </div>
+  </div>	
+
+	<div class="hidden">
+		<form id="form">
+			<input type="text" name="name" id="name" placeholder="Имя"/><br>
+			<input type="text" name="mail" placeholder="Почта"/>
+			<button id="send">Отправить</button>
+		</form>
+	</div>
+	
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/common.js"></script>
 </body>
 </html>
