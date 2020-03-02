@@ -23,7 +23,7 @@
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
           <li class="active"><a>О нас</a></li>
-          <li><a href="#">Курсы онлайн</a></li>
+          <li><a href="courses_online.php">Курсы онлайн</a></li>
           <li><a href="contacts.php">Контакты</a></li>
           <li><a href="#form" class="popup">Войти</a></li>
         </ul>

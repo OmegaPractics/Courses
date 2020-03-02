@@ -203,10 +203,33 @@ form input {
 }
 
 
+#dg .til {
+	background-color: white;
+	padding: 20px 25px 20px 25px;
+	margin: 0px 30px 70px 30px;
+	
+}
 
+#dg .til h4 {
+	margin-bottom: 25px;
+	font-size: 24px;
+}
 
+#dg .til h5 {
+	font-size: 18px;
+	text-align: justify;
+}
 
-
+#start_course {
+	font-family: "Raleway";
+	font-weight: 300;
+	font-size: 24px;
+	background-color: #78858b;
+	color: white;
+	margin-top: 15px;
+	margin-left: 140px;
+	padding: 5px 20px;
+}
 
 
 

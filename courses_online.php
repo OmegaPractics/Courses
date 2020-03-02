@@ -22,9 +22,9 @@
       <div class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
           <li><a href="about_company.php">О нас</a></li>
-          <li><a href="courses_online.php">Курсы онлайн</a></li>
+          <li class="active"><a>Курсы онлайн</a></li>
           <li><a href="contacts.php">Контакты</a></li>
-          <li class="active"><a href="#">Профиль</a></li>
+          <li><a href="#">Войти</a></li>
         </ul>
       </div>
     </div>
@@ -42,7 +42,7 @@
   
   <div id="dg">
     <div class="container">
-	<h4>Активные курсы</h4>
+	<h4>Перечень доступных курсов</h4>
       <div class="row centered">
         
         <br>
@@ -51,7 +51,6 @@
 			  <h4>Английский за 7 дней</h4>
 			  <h5>Коллекция видеоуроков, направленных на понимание и разбор языка</h5>
 			  <a href="#"><img src="img/start.jpeg" alt=""></a>
-			  <button id="start_course">Начать</button>
           </div>
         </div>
         <div class="col-lg-4">
@@ -59,7 +58,6 @@
 			  <h4>Развитие памяти</h4>
 			  <h5>Серия уроков, направленных на комплексное развитие вашего интеллекта</h5>
 			  <a href="#"><img src="img/start.jpeg" alt=""></a>
-			  <button id="start_course">Начать</button>
           </div>
         </div>
         <div class="col-lg-4">
@@ -67,7 +65,6 @@
 			  <h4>Развитие внимания</h4>
 			  <h5>Коллекция видеоуроков, направленных на сильный "апгрейд" вашего внимания</h5>
 			  <a href="#"><img src="img/start.jpeg" alt=""></a>
-			  <button id="start_course">Начать</button>
           </div>
         </div>
 		
@@ -76,7 +73,6 @@
 			  <h4>Стрессоустойчивость</h4>
 			  <h5>Серия видеоуроков, способствующих повышению способности воздержания от стрессовых ситуаций</h5>
               <a href="#"><img src="img/start.jpeg" alt=""></a>
-			  <button id="start_course">Начать</button>
           </div>
         </div>
       </div>
