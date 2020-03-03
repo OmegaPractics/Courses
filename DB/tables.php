@@ -55,6 +55,7 @@
 	( id INT NOT NULL AUTO_INCREMENT , 
 	name TEXT NOT NULL, 
 	teacher INT NOT NULL, 
+	description TEXT NOT NULL,
 	PRIMARY KEY (id)) 
 	ENGINE = InnoDB;";
 	

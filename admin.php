@@ -42,15 +42,15 @@
   
   <?php
 	$localhost = "localhost"; 
-	$db = "MySiteDB"; 
+	$db = "Courses"; 
 	$user = "admin"; 
 	$password = "admin";
  
-	$link = mysqli_connect($localhost, $user, $password)
+	$link = mysqli_connect($localhost, $user, $password);
 	mysqli_query($link, "SET NAMES 'utf8';") or die(mysql_error());
 	mysqli_query($link, "SET CHARACTER SET 'utf8';") or die(mysql_error()); 
 	
-	
+	$select_note = mysqli_query($link, "SELECT * FROM $db.Courses ORDER BY name DESC");
   ?>
   
   
@@ -64,12 +64,12 @@
 					  <div class="til">
 						  <h4>
 								<?php
-									echo "$note['name_c'] <br>";
+									echo $note['name']."<br>";
 								?>
 						  </h4>
 						  <h5>
 								<?php
-									echo "$note['description_c'] <br>";
+									echo $note['description']."<br>";
 								?>
 						  </h5>
 						  <a href="#"><img src="img/start.jpeg" alt=""></a>
@@ -81,7 +81,9 @@
    </div>		
 	
 	
-	
+	<?php 
+		$select_note = mysqli_query($link, "SELECT * FROM $db.User WHERE `status`='Student'");
+	?>
 	
   <div id="admin">
 	<div class="container">
@@ -91,8 +93,8 @@
 			while ($note = mysqli_fetch_array($select_note)){
 				 echo "Имя: ";
 				 ?> 
-				 <a href="profile.php?note=<?php echo $note['id']; ?>"><?php echo $note ['name'];?></a>
-				 <?php echo "; Почта: $note ['mail'] <br>";} 
+				 <a href="profile.php?note=<?php echo $note['id']; ?>"><?php echo $note['lastname']." ".$note['firstname'];?></a>
+				 <?php echo "; Телефон:".$note['telephone']."<br>";} 
 				 ?>
 		</h5>		 
 	</div>
