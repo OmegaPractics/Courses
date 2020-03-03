@@ -176,10 +176,26 @@ hr {
 	display: none;
 }
 
-form {
+#form {
 	padding: 50px 50px 50px 50px;
 	background-color: #fff;
 	max-width: 350px;
+	margin: auto;
+	position: relative;
+}
+
+#add_man {
+	padding: 50px 50px 50px 50px;
+	background-color: #fff;
+	max-width: 350px;
+	margin: auto;
+	position: relative;
+}
+
+#add_course {
+	padding: 50px 50px 50px 50px;
+	background-color: #fff;
+	max-width: 550px;
 	margin: auto;
 	position: relative;
 }
@@ -194,6 +210,15 @@ form input {
 }
 
 #send {
+	font-family: "Raleway";
+	font-weight: 300;
+	font-size: 24px;
+	background-color: #e66761;
+	color: white;
+	margin-left: -2px;
+}
+
+#add {
 	font-family: "Raleway";
 	font-weight: 300;
 	font-size: 24px;
@@ -231,6 +256,26 @@ form input {
 	padding: 5px 20px;
 }
 
+#dg a {
+	font-family: "Raleway";
+	font-weight: 300;
+	font-size: 24px;
+	background-color: #78858b;
+	color: white;
+	margin-top: 15px;
+	padding: 5px 20px;
+}
+
+#admin .popup {
+	font-family: "Raleway";
+	font-weight: 300;
+	font-size: 24px;
+	background-color: #78858b;
+	color: white;
+	margin-top: 15px;
+	padding: 5px 20px;
+}
+
 #admin h4, #user h4{
 	font-size: 35px;	
 	margin-top: 70px;
@@ -248,7 +293,10 @@ form input {
 	margin-bottom: 70px;
 }
 
-
+.role {
+	font-size: 20px;
+	margin-bottom: 8px;
+}
 
 
 
