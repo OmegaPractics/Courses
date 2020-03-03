@@ -39,85 +39,49 @@
       </div>
     </div>
   </div>
-  <div class="container w">
-    <div class="row centered">
-      <br><br>
-      <div class="col-lg-4">
-        <i class="fa fa-heart"></i>
-        <h4>Кто мы?</h4>
-        <p>Courses &#8211; это сообщество единомышленников, решивших бросить вызов сегодняшнему дню</p>
-      </div>
-      <div class="col-lg-4">
-        <i class="fa fa-star"></i>
-        <h4>Наша миссия</h4>
-        <p>Мы стремимся направить вас на путь эффективного и легкого образования для развития в любой области. Больше никакой "нудятины"</p>
-      </div>
-      <div class="col-lg-4">
-        <i class="fa fa-trophy"></i>
-        <h4>Команда</h4>
-        <p>Наши преподаватели &#8211; истинные профессионалы, первыми прошедшие подготовку по нашим авторским курсам</p>
-      </div>
-    </div>
-    <br><br>
-  </div>
+  
   <div id="dg">
-    <div class="container">
-      <div class="row centered">
-        <h4>Начать обучение</h4>
-        <br>
-        <div class="col-lg-4">
-          <div class="tilt">
-            <a href="#"><img src="img/start.jpeg" alt=""></a>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="tilt">
-            <a href="#"><img src="img/start.jpeg" alt=""></a>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="tilt">
-            <a href="#"><img src="img/start.jpeg" alt=""></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-	  <div class="container wb">
-		<div class="row centered">
-		  <br><br>
-		  <div class="col-lg-8 col-lg-offset-2">
-			<h4>Мы задаем тренд завтрашнему дню</h4>
-			<p>Наши курсы прошли более 1000 человек по всему миру. И тех результатов, что им удалось добиться, может достичь КАЖДЫЙ</p>
-			<p><br><br></p>
-		  </div>
-		  <div class="col-lg-2"></div>
-		  </div>
-		</div>
-	  </div>
-  <div id="team">
-  </div>
-  <div id="lg">
-    <div class="container">
-      <div class="row centered">
-        <h4>Партнеры</h4>
-        <div class="col-lg-2 col-lg-offset-1">
-          <img src="img/hands.png" alt="">
-        </div>
-        <div class="col-lg-2">
-          <img src="img/hands.png" alt="">
-        </div>
-        <div class="col-lg-2">
-          <img src="img/hands.png" alt="">
-        </div>
-        <div class="col-lg-2">
-          <img src="img/hands.png" alt="">
-        </div>
-        <div class="col-lg-2">
-          <img src="img/hands.png" alt="">
-        </div>
-      </div>
-    </div>
+	<div class="container">
+		<h4>Список курсов</h4><br>			
+			<?php					
+				while ($note = mysqli_fetch_array($select_note)){
+					?> 
+					<div class="col-lg-4">
+					  <div class="til">
+						  <h4>
+								<?php
+									echo "$note['name_c'] <br>";
+								?>
+						  </h4>
+						  <h5>
+								<?php
+									echo "$note['description_c'] <br>";
+								?>
+						  </h5>
+						  <a href="#"><img src="img/start.jpeg" alt=""></a>
+					  </div>
+					</div>
+			<?php 
+			}?>	
+	</div>
+   </div>		
+	
+	
+	
+	
+  <div id="admin">
+	<div class="container">
+		<h4>Список обучающихся</h4>
+		<h5>		
+		<?php		
+			while ($note = mysqli_fetch_array($select_note)){
+				 echo "Имя: ";
+				 ?> 
+				 <a href="profile.php?note=<?php echo $note['id']; ?>"><?php echo $note ['name'];?></a>
+				 <?php echo "; Почта: $note ['mail'] <br>";} 
+				 ?>
+		</h5>		 
+	</div>
   </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>

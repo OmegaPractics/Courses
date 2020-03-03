@@ -24,7 +24,7 @@
           <li><a href="about_company.php">О нас</a></li>
           <li><a href="courses_online.php">Курсы онлайн</a></li>
           <li><a href="contacts.php">Контакты</a></li>
-          <li class="active"><a href="#">Профиль</a></li>
+          <li class="active"><a href="#">Войти</a></li>
         </ul>
       </div>
     </div>
@@ -40,39 +40,21 @@
     </div>
   </div>
   
-  <div id="dg">
-    <div class="container">
-	<h4>Активные курсы</h4>
-      <div class="row centered">
-        <?php					
-				while ($note = mysqli_fetch_array($select_note)){
-					?> 
-					<div class="col-lg-4">
-					  <div class="til">
-						  <h4>
-								<?php
-									echo "$note['name_c'] <br>";
-								?>
-						  </h4>
-						  <h5>
-								<?php
-									echo "$note['description_c'] <br>";
-								?>
-						  </h5>
-						  <a href="#"><img src="img/start.jpeg" alt=""></a>
-						  <button id="start_course">Начать</button>
-					  </div>
-					</div>
-			<?php 
-			}?>
-      </div>
-    </div>
+  <div id="user">
+	<div class="container">
+		<h4>Профиль</h4>
+			<h5>
+			<?php
+				echo "Имя: $note ['name'] <br>";
+				echo "Фамилия: $note ['surname'] <br>";
+				echo "Возраст: $note ['age'] <br>";
+				echo "Почта: $note ['mail'] <br>";				
+			?>
+			</h5>
+	</div>
   </div>
-
-	
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
-  <script src="js/commands.js"></script>
 </body>
 </html>

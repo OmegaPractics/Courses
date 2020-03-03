@@ -231,9 +231,22 @@ form input {
 	padding: 5px 20px;
 }
 
+#admin h4, #user h4{
+	font-size: 35px;	
+	margin-top: 70px;
+}
 
+#admin a {
+	font-size: 23px;
+}
+#admin h5 {
+	font-size: 23px;
+}
 
-
+#user h5 {
+	font-size: 25px;
+	margin-bottom: 70px;
+}
 
 
 

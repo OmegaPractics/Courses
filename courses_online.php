@@ -43,38 +43,28 @@
   <div id="dg">
     <div class="container">
 	<h4>Перечень доступных курсов</h4>
-      <div class="row centered">
-        
+      <div class="row centered">        
         <br>
-        <div class="col-lg-4">
-          <div class="til">
-			  <h4>Английский за 7 дней</h4>
-			  <h5>Коллекция видеоуроков, направленных на понимание и разбор языка</h5>
-			  <a href="#"><img src="img/start.jpeg" alt=""></a>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="til">
-			  <h4>Развитие памяти</h4>
-			  <h5>Серия уроков, направленных на комплексное развитие вашего интеллекта</h5>
-			  <a href="#"><img src="img/start.jpeg" alt=""></a>
-          </div>
-        </div>
-        <div class="col-lg-4">
-          <div class="til">		  
-			  <h4>Развитие внимания</h4>
-			  <h5>Коллекция видеоуроков, направленных на сильный "апгрейд" вашего внимания</h5>
-			  <a href="#"><img src="img/start.jpeg" alt=""></a>
-          </div>
-        </div>
-		
-		<div class="col-lg-4">
-          <div class="til">
-			  <h4>Стрессоустойчивость</h4>
-			  <h5>Серия видеоуроков, способствующих повышению способности воздержания от стрессовых ситуаций</h5>
-              <a href="#"><img src="img/start.jpeg" alt=""></a>
-          </div>
-        </div>
+        <?php					
+				while ($note = mysqli_fetch_array($select_note)){
+					?> 
+					<div class="col-lg-4">
+					  <div class="til">
+						  <h4>
+								<?php
+									echo "$note['name_c'] <br>";
+								?>
+						  </h4>
+						  <h5>
+								<?php
+									echo "$note['description_c'] <br>";
+								?>
+						  </h5>
+						  <a href="#"><img src="img/start.jpeg" alt=""></a>
+					  </div>
+					</div>
+			<?php 
+			}?>	
       </div>
     </div>
   </div>
