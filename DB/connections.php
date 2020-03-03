@@ -10,7 +10,10 @@
 	}
 	$db = "Courses";
 	
-	$query = "ALTER TABLE $db.User ADD FOREIGN KEY (school) REFERENCES $db.School (id) ON DELETE CASCADE";
+	$query = "ALTER TABLE $db.User 
+				ADD FOREIGN KEY (school) 
+				REFERENCES $db.School (id) 
+				ON DELETE CASCADE";
 	
 	$create_db = mysqli_query($link, $query);
 	if ($create_db) 

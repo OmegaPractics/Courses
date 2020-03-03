@@ -40,6 +40,20 @@
     </div>
   </div>
   
+  <?php
+	$localhost = "localhost"; 
+	$db = "MySiteDB"; 
+	$user = "admin"; 
+	$password = "admin";
+ 
+	$link = mysqli_connect($localhost, $user, $password)
+	mysqli_query($link, "SET NAMES 'utf8';") or die(mysql_error());
+	mysqli_query($link, "SET CHARACTER SET 'utf8';") or die(mysql_error()); 
+	
+	
+  ?>
+  
+  
   <div id="dg">
 	<div class="container">
 		<h4>Список курсов</h4><br>			
